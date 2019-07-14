@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="fraud" translate="label" type="text" sortOrder="411" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Fraud Prevention Orders</label>
+            <tab>sales</tab>
+            <resource>Magento_Sales::fraud</resource>
+            <group id="fraud_prevention" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                <group id="config" translate="label comment" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Configuration</label>
+                    <field id="active" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Enable Fraud Prevention Solution</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>fraud/fraud_prevention/active</config_path>
+                    </field>
+                    <field id="email_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Email id </label>
+						<comment><![CDATA[Add multiple email ids with comma separated.]]></comment>
+                        <config_path>fraud/fraud_prevention/email_id</config_path>
+                    </field>
+                </group>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:Magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="orders_fraud_email_template" label="email" file="orders/order.html" type="html" module="MageModule_Orders" area="frontend"/>
+</config>
